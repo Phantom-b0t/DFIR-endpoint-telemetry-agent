@@ -14,6 +14,10 @@ A Python-based Digital Forensics and Incident Response (DFIR) tool designed for 
 - **Backend:** Flask (HTTPS Enabled)
 - **Libraries:** Psutil, Requests, Pillow, PyOpenSSL
 
+## Architecture
+- **Agent:** Collects volatile data (Network, Processes, Browser) -> Bundles in memory -> Sends via HTTPS.
+- **C2 Server:** Receives encrypted payload -> Verifies SHA-256 integrity -> Stores & Displays on Dashboard.
+  
 ## Installation & Usage
 1. Install dependencies:
    `pip install flask requests psutil pillow pyopenssl`
